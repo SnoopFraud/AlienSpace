@@ -36,15 +36,21 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        range = Vector2.Distance(transform.position, destination.position);
-        LookAt = destination.position;
+        if(destination == null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            range = Vector2.Distance(transform.position, destination.position);
+            LookAt = destination.position;
+        }
 
         if(range > minDistance)
         {
             transform.position 
                 = Vector2.MoveTowards(transform.position, destination.position, speed * Time.deltaTime);
         }
-
 
         //Set enemy mengarah player
         Vector2 lookdir = LookAt - rb.position;

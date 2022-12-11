@@ -25,6 +25,12 @@ public class WaveSpawner : MonoBehaviour
     public bool CanSpawn;
 
     public UIManager UI;
+    public Player pl;
+
+    private void Awake()
+    {
+        pl = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -105,7 +111,14 @@ public class WaveSpawner : MonoBehaviour
             WaveDuration = currentwave * 5;
         }
 
-        GenerateEnemies();
+        if(pl == null)
+        {
+            StopCoroutine("GenerateEnemies");
+        }
+        else
+        {
+            GenerateEnemies();
+        }
         SpawnInterval = WaveDuration/enemiestoSpawn.Count; // gives a fixed time between each enemies
 
         WaveTimer = WaveDuration;
