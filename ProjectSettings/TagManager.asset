@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Bullet
+  - Asteroid
+  - Enemy
+  - WaveManager
+  - UIManager
+  - Bound
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - BG
+  - Water
+  - UI
+  - Asteroid
+  - Enemy
+  - Player
+  - Boundary
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: BG
+    uniqueID: 4148832935
+    locked: 0
+  - name: Player
+    uniqueID: 1688553639
+    locked: 0
